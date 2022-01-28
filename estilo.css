@@ -1,19 +1,27 @@
 /* Geral */
 
+* {
+    box-sizing: border-box;
+}  
+
 body {
     font-family: Roboto;
+    width: 100vw;
+    max-width: 500px;
 }
 
 /* Barra de cima */
 
 nav {
-    width: 414px;
+    width: 100vw;
+    max-width: 500px;
     height: 92px;
     left: 0px;
     top: 0px;
+    z-index: 1;
     position: fixed;
     color: #FFFFFF;
-    background: #CF2B2B;
+    background: #CF2B2B;    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -40,8 +48,11 @@ nav p {
 
 /* Parte do meio */
 
+a {
+    text-decoration: none;
+}
+
 header {
-    width: 414px;
     height: 880px;
     margin: 92px 0;
     overflow: hidden;
@@ -72,6 +83,7 @@ header .opcao {
     margin-right: 16px;
     border-radius: 9px;
     background: #FFFFFF;
+    position: relative;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
 }
 
@@ -101,10 +113,50 @@ header .opcao {
     color: #A6A6A6;  
 }
 
+ion-icon {
+    right: 15px;
+    bottom: 15px;
+    font-size: 20px;
+    display: none;
+    position: absolute;
+    color: #32B72F;
+}
+
+.opcoes .escolhido {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.escolhido ion-icon {
+    display: block;
+}
+
+/* .opcoes .prato2 {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.prato2 ion-icon {
+    display: block;
+}
+
+.opcoes .prato3 {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.prato3 ion-icon {
+    display: block;
+} */
+
 /* Barra de baixo */
 
 footer {
-    width: 414px;
+    width: 100vw;
+    max-width: 500px;
     height: 92px;
     bottom: 0;
     left: 0;
@@ -119,6 +171,7 @@ footer .caixa {
     width: 364px;
     height: 61px;
     border-radius: 50px;
+    border: none;
     background: #CBCBCB;
 }
 

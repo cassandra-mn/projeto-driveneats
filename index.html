@@ -19,76 +19,90 @@
 
     <header>
         <h2>Primeiro, seu prato</h2>
-        <div class="opcoes">
-            <div class="opcao">
+        <div class="opcoes" data-identifier="dishes">
+            <div class="opcao prato1" data-identifier="food-option">
+                <a href="#" onclick="prato1()">
                 <img src="images/frango_yin_yang 1.png" alt="frango">
-                <p>Frango Yin Yang</p>
+                <div data-identifier="food-title"><p>Frango Yin Yang</p></div>
                 <p><small>Um pouco de batata, um pouco de salada</small></p>
-                <p>R$ 14,90</p>
+                <div data-identifier="food-price"><p>R$ 14,90</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
-            <div class="opcao">
+            <div class="opcao prato2" data-identifier="food-option">
+                <a href="#" onclick="prato2()">
                 <img src="images/carne-de-sol-chapa-com-manteiga.jpg" alt="frango">
-                <p>Carne de sol com macaxeira</p>
+                <div data-identifier="food-title"><p>Carne de sol com macaxeira</p></div>
                 <p><small>Acompanha queijo</small></p>
-                <p>R$ 25,90</p>
+                <div data-identifier="food-price"><p>R$ 25,90</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
-            <div class="opcao">
+            <div class="opcao prato3" data-identifier="food-option">
+                <a href="#" onclick="prato3()">
                 <img src="images/tilápia-na-brasa.jpg" alt="frango">
-                <p>Tilápia na brasa</p>
+                <div data-identifier="food-title"><p>Tilápia na brasa</p></div>
                 <p><small>Com salada e purê de batata</small></p>
-                <p>R$ 37,90</p>
+                <div data-identifier="food-price"><p>R$ 37,90</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
         </div>
 
         <h2>Agora, sua bebida</h2>
-        <div class="opcoes">
-            <div class="opcao">
+        <div class="opcoes" data-identifier="drinks">
+            <div class="opcao" data-identifier="food-option">
                 <img src="images/coquinha_gelada 1.png" alt="coca-cola">
-                <p>Coquinha gelada</p>
+                <div data-identifier="food-title"><p>Coquinha gelada</p></div>
                 <p><small>Lata 350ml</small></p>
-                <p>R$ 4,50</p>
+                <div data-identifier="food-price"><p>R$ 4,50</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div class="opcao">
+            <div class="opcao" data-identifier="food-option">
                 <img src="images/suco-natural.jpg" alt="coca-cola">
-                <p>Suco natural</p>
+                <div data-identifier="food-title"><p>Suco natural</p></div>
                 <p><small>Copo 300ml</small></p>
-                <p>R$ 3,50</p>
+                <div data-identifier="food-price"><p>R$ 3,50</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div class="opcao">
+            <div class="opcao" data-identifier="food-option">
                 <img src="images/agua.jpg" alt="coca-cola">
-                <p>Água</p>
+                <div data-identifier="food-title"><p>Água</p></div>
                 <p><small>Sem gás</small></p>
-                <p>R$ 2,50</p>
+                <div data-identifier="food-price"><p>R$ 2,50</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
         </div>
 
         <h2>Por fim, sua sobremesa</h2>
-        <div class="opcoes">
-            <div class="opcao">
+        <div class="opcoes" data-identifier="desserts">
+            <div class="opcao" data-identifier="food-option">
                 <img src="images/pudim 1.png" alt="pudim">
-                <p>Pudim</p>
+                <div data-identifier="food-title"><p>Pudim</p></div>
                 <p><small>Fatia</small></p>
-                <p>R$ 7,90</p>
+                <div data-identifier="food-price"><p>R$ 7,90</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div class="opcao">
+            <div class="opcao" data-identifier="food-option">
                 <img src="images/delicia-de-abacaxi.jpg" alt="pudim">
-                <p>Delícia de abacaxi</p>
+                <div data-identifier="food-title"><p>Delícia de abacaxi</p></div>
                 <p><small>Serve 1 pessoa</small></p>
-                <p>R$ 8,90</p>
+                <div data-identifier="food-price"><p>R$ 8,90</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div class="opcao">
+            <div class="opcao" data-identifier="food-option">
                 <img src="images/acai-copo.jfif" alt="pudim">
-                <p>Açaí no copo</p>
+                <div data-identifier="food-title"><p>Açaí no copo</p></div>
                 <p><small>Copo 500ml</small></p>
-                <p>R$ 10,90</p>
+                <div data-identifier="food-price"><p>R$ 10,90</p></div>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
         </div>
     </header>
 
     <footer>
-        <div class="caixa">
+        <button class="caixa">
             <p>Selecione os 3 itens<br>para fechar o pedido</p>
-        </div>
+        </button>
     </footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
