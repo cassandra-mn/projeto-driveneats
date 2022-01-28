@@ -8,6 +8,7 @@ body {
     font-family: Roboto;
     width: 100vw;
     max-width: 500px;
+
 }
 
 /* Barra de cima */
@@ -152,13 +153,43 @@ footer .caixa {
     height: 61px;
     border-radius: 50px;
     border: none;
+    bottom: 0;
+    position: relative;
     background: #CBCBCB;
 }
 
+.caixa .fechar {
+    display: none;
+}
+
 footer p {
+    width: 200px;
     font-size: 20px;
     line-height: 23px;
-    margin-top: 8px;
-    text-align: center;
+    top: 5px;
+    left: 70px;
+    position: absolute;
     color: #FFFFFF;
+}
+
+.fechar-pedido {
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    border: none;
+    bottom: 0;
+    position: relative;
+    background: #32B72F;
+}
+
+.fechar-pedido .fechar {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    display: block;
+}
+
+.fechar-pedido .esconder {
+    display: none;
 }
