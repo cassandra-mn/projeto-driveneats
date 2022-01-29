@@ -48,8 +48,32 @@ function verificar() {
         botao.classList.add("fechar-pedido");
         botao.classList.remove("caixa");
         botao.classList.add("fechar-pedido .fechar");
-        finalizarPedido();
     }
+}
+
+function confirmarPedido() {
+    const finalizar = document.querySelector(".escondido");
+    finalizar.classList.remove("escondido");
+    const pratoFinal = document.querySelector(".pratoEscolhido");
+	pratoFinal.innerHTML = prato;
+    const bebidaFinal = document.querySelector(".bebidaEscolhida");
+	bebidaFinal.innerHTML = bebida;
+    const sobremesaFinal = document.querySelector(".sobremesaEscolhida");
+	sobremesaFinal.innerHTML = sobremesa;
+    const valor1 = document.querySelector(".precoPrato");
+    valor1.innerHTML = valorPrato.toFixed(2).toString().replace(".", ",");
+    const valor2 = document.querySelector(".precoBebida");
+    valor2.innerHTML = valorBebida.toFixed(2).toString().replace(".", ",");
+    const valor3 = document.querySelector(".precoSobremesa");
+    valor3.innerHTML = valorSobremesa.toFixed(2).toString().replace(".", ",");
+    valorTotal = valorPrato + valorBebida + valorSobremesa;
+    const valor4 = document.querySelector(".precoFinal");
+    valor4.innerHTML = "R$ " + valorTotal.toFixed(2).toString().replace(".", ",");
+}
+
+function cancelar() {
+    const voltar = document.querySelector(".confirmacao");
+    voltar.classList.add("escondido");
 }
 
 function finalizarPedido() {

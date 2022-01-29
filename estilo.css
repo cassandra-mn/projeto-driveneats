@@ -8,7 +8,6 @@ body {
     font-family: Roboto;
     width: 100vw;
     max-width: 500px;
-
 }
 
 /* Barra de cima */
@@ -138,11 +137,10 @@ ion-icon {
 .confirmacao {
     width: 377px;
     height: 353px;
-    left: 59px;
-    top: 180px;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
+    top: 25%;
+    left: 50px;
+    padding: 21px;
+    position: fixed;
     background: #50D074;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
@@ -153,7 +151,62 @@ ion-icon {
 }
 
 .confirmacao p {
-    color: white;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}
+
+.confirmacao .centralizar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 13px;
+}
+
+.confirmacao .centralizar strong {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.confirmacao .justificar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.confirmacao button {
+    width: 329px;
+    height: 52px;
+    left: calc(50% - 329px/2 + 0.5px);
+    top: 583px;
+    margin-top: 5px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    border-style: none;
+}
+
+.confirmacao button p {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    margin: auto;
+    color: #50D074;
+}
+
+.confirmacao button:hover {
+    cursor: pointer;
+}
+
+.centralizar a {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.escondido {
+    display: none;
 }
 
 /* Barra de baixo */
