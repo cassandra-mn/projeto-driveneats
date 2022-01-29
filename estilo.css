@@ -135,10 +135,11 @@ ion-icon {
 /* Tela de confirmação */
 
 .confirmacao {
-    width: 377px;
+    width: 100%;
+    max-width: 377px;
     height: 353px;
     top: 25%;
-    left: 50px;
+    left: 25px;
     padding: 21px;
     position: fixed;
     background: #50D074;
