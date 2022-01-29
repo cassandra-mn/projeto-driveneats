@@ -19,9 +19,9 @@
 
     <header>
         <h2>Primeiro, seu prato</h2>
-        <div class="opcoes" data-identifier="dishes">
+        <div class="opcoes opcao-prato" data-identifier="dishes">
             <div class="opcao prato1" data-identifier="food-option">
-                <a href="#" onclick="prato1()">
+                <a href="#" onclick="pratoEscolhido('.prato1', 'Frango Yin Yang', 14.90)">
                 <img src="images/frango_yin_yang 1.png" alt="frango">
                 <div data-identifier="food-title"><p>Frango Yin Yang</p></div>
                 <p><small>Um pouco de batata, um pouco de salada</small></p>
@@ -29,7 +29,7 @@
                 <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
             <div class="opcao prato2" data-identifier="food-option">
-                <a href="#" onclick="prato2()">
+                <a href="#" onclick="pratoEscolhido('.prato2', 'Carne de sol com macaxeira', 25.90)">
                 <img src="images/carne-de-sol-chapa-com-manteiga.jpg" alt="frango">
                 <div data-identifier="food-title"><p>Carne de sol com macaxeira</p></div>
                 <p><small>Acompanha queijo</small></p>
@@ -37,7 +37,7 @@
                 <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
             <div class="opcao prato3" data-identifier="food-option">
-                <a href="#" onclick="prato3()">
+                <a href="#" onclick="pratoEscolhido('.prato3', 'Tilápia na brasa', 37.90)">
                 <img src="images/tilápia-na-brasa.jpg" alt="frango">
                 <div data-identifier="food-title"><p>Tilápia na brasa</p></div>
                 <p><small>Com salada e purê de batata</small></p>
@@ -47,9 +47,9 @@
         </div>
 
         <h2>Agora, sua bebida</h2>
-        <div class="opcoes" data-identifier="drinks">
+        <div class="opcoes opcao-bebida" data-identifier="drinks">
             <div class="opcao bebida1" data-identifier="food-option">
-                <a href="#" onclick="bebida1()">
+                <a href="#" onclick="bebidaEscolhida('.bebida1', 'Coquinha gelada', 4.50)">
                 <img src="images/coquinha_gelada 1.png" alt="coca-cola">
                 <div data-identifier="food-title"><p>Coquinha gelada</p></div>
                 <p><small>Lata 350ml</small></p>
@@ -57,7 +57,7 @@
                 <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
             <div class="opcao bebida2" data-identifier="food-option">
-                <a href="#" onclick="bebida2()">
+                <a href="#" onclick="bebidaEscolhida('.bebida2', 'Suco natural', 3.50)">
                 <img src="images/suco-natural.jpg" alt="coca-cola">
                 <div data-identifier="food-title"><p>Suco natural</p></div>
                 <p><small>Copo 300ml</small></p>
@@ -65,7 +65,7 @@
                 <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
             <div class="opcao bebida3" data-identifier="food-option">
-                <a href="#" onclick="bebida3()">
+                <a href="#" onclick="bebidaEscolhida('.bebida3', 'Água', 2.50)">
                 <img src="images/agua.jpg" alt="coca-cola">
                 <div data-identifier="food-title"><p>Água</p></div>
                 <p><small>Sem gás</small></p>
@@ -75,9 +75,9 @@
         </div>
 
         <h2>Por fim, sua sobremesa</h2>
-        <div class="opcoes" data-identifier="desserts">
+        <div class="opcoes opcao-sobremesa" data-identifier="desserts">
             <div class="opcao sobremesa1" data-identifier="food-option">
-                <a href="#" onclick="sobremesa1()">
+                <a href="#" onclick="sobremesaEscolhida('.sobremesa1', 'Pudim', 7.90)">
                 <img src="images/pudim 1.png" alt="pudim">
                 <div data-identifier="food-title"><p>Pudim</p></div>
                 <p><small>Fatia</small></p>
@@ -85,7 +85,7 @@
                 <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
             <div class="opcao sobremesa2" data-identifier="food-option">
-                <a href="#" onclick="sobremesa2()">
+                <a href="#" onclick="sobremesaEscolhida('.sobremesa2', 'Delícia de abacaxi', 8.90)">
                 <img src="images/delicia-de-abacaxi.jpg" alt="pudim">
                 <div data-identifier="food-title"><p>Delícia de abacaxi</p></div>
                 <p><small>Serve 1 pessoa</small></p>
@@ -93,7 +93,7 @@
                 <ion-icon name="checkmark-circle"></ion-icon></a>
             </div>
             <div class="opcao sobremesa3" data-identifier="food-option">
-                <a href="#" onclick="sobremesa3()">
+                <a href="#" onclick="sobremesaEscolhida('.sobremesa3', 'Açaí no copo', 10.90)">
                 <img src="images/acai-copo.jfif" alt="pudim">
                 <div data-identifier="food-title"><p>Açaí no copo</p></div>
                 <p><small>Copo 500ml</small></p>
@@ -103,10 +103,17 @@
         </div>
     </header>
 
+    <section>
+        <div class="confirmacao escondido">
+            <div class="centralizar"><p><strong>Confirme seu pedido</strong></p></div>
+            <div><p>Prato</p><p>preço</p></div>
+        </div>
+    </section>
+    
     <footer>
         <button class="caixa">
             <p class="esconder">Selecione os 3 itens para fechar o pedido</p>
-            <a href="#" class="fechar">Fechar pedido</a>
+            <a onclick="finalizarPedido()" class="fechar">Fechar pedido</a>
         </button>
     </footer>
     <script src="script.js"></script>

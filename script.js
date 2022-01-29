@@ -1,102 +1,70 @@
-let prato = 0;
-let bebida = 0;
-let sobremesa = 0;
+let prato = null;
+let bebida = null;
+let sobremesa = null;
+let valorPrato = 0;
+let valorBebida = 0;
+let valorSobremesa = 0;
+let valorTotal = 0;
 
-function prato1() {
-    prato = document.querySelector(".prato1");
-    prato.classList.add("escolhido");
-    const remover2 = document.querySelector(".prato2");
-    remover2.classList.remove("escolhido");
-    const remover3 = document.querySelector(".prato3");
-    remover3.classList.remove("escolhido");
+function pratoEscolhido(nomePrato, nomeVisualização, valor) {
+    const selecionado = document.querySelector(".opcao-prato .escolhido");
+    if (selecionado !== null) {
+        selecionado.classList.remove("escolhido");
+    }
+    prato = nomeVisualização; 
+    valorPrato = valor;
+    const opcao = document.querySelector(nomePrato);
+    opcao.classList.add("escolhido");
     verificar();
 }
 
-function prato2() {
-    prato = document.querySelector(".prato2");
-    prato.classList.add("escolhido");
-    const remover1 = document.querySelector(".prato1");
-    remover1.classList.remove("escolhido");
-    const remover3 = document.querySelector(".prato3");
-    remover3.classList.remove("escolhido");
+function bebidaEscolhida(nomeBebida, nomeVisualização, valor) {
+    const selecionado = document.querySelector(".opcao-bebida .escolhido");
+    if (selecionado !== null) {
+        selecionado.classList.remove("escolhido");
+    }
+    bebida = nomeVisualização; 
+    valorBebida = valor;
+    const opcao = document.querySelector(nomeBebida);
+    opcao.classList.add("escolhido");
     verificar();
 }
 
-function prato3() {
-    prato = document.querySelector(".prato3");
-    prato.classList.add("escolhido");
-    const remover1 = document.querySelector(".prato1");
-    remover1.classList.remove("escolhido");
-    const remover3 = document.querySelector(".prato2");
-    remover3.classList.remove("escolhido");
-    verificar();
-}
-
-function bebida1() {
-    bebida = document.querySelector(".bebida1");
-    bebida.classList.toggle("escolhido");
-    const remover2 = document.querySelector(".bebida2");
-    remover2.classList.remove("escolhido");
-    const remover3 = document.querySelector(".bebida3");
-    remover3.classList.remove("escolhido");
-    verificar();
-}
-
-function bebida2() {
-    bebida = document.querySelector(".bebida2");
-    bebida.classList.toggle("escolhido");
-    const remover1 = document.querySelector(".bebida1");
-    remover1.classList.remove("escolhido");
-    const remover3 = document.querySelector(".bebida3");
-    remover3.classList.remove("escolhido");
-    verificar();
-}
-
-function bebida3() {
-    bebida = document.querySelector(".bebida3");
-    bebida.classList.toggle("escolhido");
-    const remover1 = document.querySelector(".bebida1");
-    remover1.classList.remove("escolhido");
-    const remover3 = document.querySelector(".bebida2");
-    remover3.classList.remove("escolhido");
-    verificar();
-}
-
-function sobremesa1() {
-    sobremesa = document.querySelector(".sobremesa1");
-    sobremesa.classList.toggle("escolhido");
-    const remover2 = document.querySelector(".sobremesa2");
-    remover2.classList.remove("escolhido");
-    const remover3 = document.querySelector(".sobremesa3");
-    remover3.classList.remove("escolhido");
-    verificar();
-}
-
-function sobremesa2() {
-    sobremesa = document.querySelector(".sobremesa2");
-    sobremesa.classList.toggle("escolhido");
-    const remover1 = document.querySelector(".sobremesa1");
-    remover1.classList.remove("escolhido");
-    const remover3 = document.querySelector(".sobremesa3");
-    remover3.classList.remove("escolhido");
-    verificar();
-}
-
-function sobremesa3() {
-    sobremesa = document.querySelector(".sobremesa3");
-    sobremesa.classList.toggle("escolhido");
-    const remover1 = document.querySelector(".sobremesa1");
-    remover1.classList.remove("escolhido");
-    const remover3 = document.querySelector(".sobremesa2");
-    remover3.classList.remove("escolhido");
+function sobremesaEscolhida(nomeSobremesa, nomeVisualização, valor) {
+    const selecionado = document.querySelector(".opcao-sobremesa .escolhido");
+    if (selecionado !== null) {
+        selecionado.classList.remove("escolhido");
+    }
+    sobremesa = nomeVisualização; 
+    valorSobremesa = valor;
+    const opcao = document.querySelector(nomeSobremesa);
+    opcao.classList.add("escolhido");
     verificar();
 }
 
 function verificar() {
-    if (prato !== 0 && bebida !== 0 && sobremesa !== 0) {
+    if (prato !== null && bebida !== null && sobremesa !== null) {
         const botao = document.querySelector(".caixa");
         botao.classList.add("fechar-pedido");
         botao.classList.remove("caixa");
         botao.classList.add("fechar-pedido .fechar");
+        finalizarPedido();
     }
+}
+
+function finalizarPedido() {
+    let nome = prompt("Qual o seu nome?");
+    let endereco = prompt("Qual o seu endereço?");
+
+    valorTotal = valorPrato + valorBebida + valorSobremesa;
+
+    const pedidoFinal = "Olá, gostaria de fazer o pedido:" +
+                        "\n- Prato: " + prato +
+                        "\n- Bebida: " + bebida +
+                        "\n- Sobremesa: " + sobremesa +
+                        "\nTotal: R$ " + valorTotal.toFixed(2) +
+                        "\n\nNome: " + nome +
+                        "\nEndereço: " + endereco;
+    const encode = encodeURIComponent(pedidoFinal);
+    window.open("https://wa.me/5583986513557?text="+encode);
 }
